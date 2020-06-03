@@ -30,7 +30,7 @@ function showResult(resultObj, amountValue, query){
     const currencies = query.split("_");
     const from = currencies[0];
     const to = currencies[1];
-    result.innerText = `${amountValue} ${from} = ${Math.round(resultObj[query]*amountValue * 10) / 100} ${to}`;
+    result.innerText = `${amountValue} ${from} = ${Math.round(resultObj[query]*amountValue * 100) / 100} ${to}`;
 }
 document.addEventListener('DOMContentLoaded', ()=>{
     fetch(`https://free.currconv.com/api/v7/currencies?apiKey=b12a6953b1207140aa3f`)
