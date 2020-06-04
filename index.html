@@ -4,9 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Compiled and minified CSS -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Currency converter</title>
     <link rel="stylesheet" href="style.css">
+    <!-- swap_horiz -->
 </head>
 <body>
     <header>
@@ -18,25 +19,29 @@
     </header>
     <section>
         <div class="container">
-            <form action="">
-                <div class="input-field">
+            <form class="row" action="">
+                <div class="input-field col s12 m5">
                     <select class="browser-default" id="from">
                         <option value="from" disabled selected>from</option>
                     </select>
                 </div>
-                <div class="input-field">
+                <div class="col s5 m2 center-align hide-on-small-only">
+                    <i class="material-icons">swap_horiz</i>
+                </div>
+                <div class="input-field col s12 m5">
                     <select class="browser-default" id="to">
                         <option disabled selected>to</option>
                     </select>
                 </div>
-                <div class="input-field">
+                <div class="input-field col s6">
                     <input type="text" id="amount">
                     <label for="amount">Amount</label>
                 </div>
-                <div class="input-field">
-                    <button id="convertBtn" class="btn waves-effect">Convert</button>
+                <div class="input-field col s12">
+                    <button type="submit" id="convertBtn" class="btn">Convert</button>
                 </div>
             </form>
+            <div class="divider"></div>
             <div class="result">
                 <h5 id="result"></h5>
             </div>
