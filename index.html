@@ -21,29 +21,29 @@
         <div class="container">
             <form class="row" action="">
                 <div class="input-field col s12 m5">
-                    <select class="browser-default" id="from">
-                        <option value="from" disabled selected>from</option>
+                    <select class="select" id="from">
+                        <option value="" disabled selected>Choose a currency</option>
                     </select>
                 </div>
                 <div class="col s5 m2 center-align hide-on-small-only">
-                    <i class="material-icons">swap_horiz</i>
+                    <i class="material-icons">trending_flat</i>
                 </div>
                 <div class="input-field col s12 m5">
-                    <select class="browser-default" id="to">
-                        <option disabled selected>to</option>
+                    <select class="select" id="to">
+                        <option value="" disabled selected>Choose a currency</option>
                     </select>
                 </div>
                 <div class="input-field col s6">
-                    <input type="text" id="amount">
+                    <input type="text" id="amount" required class="validate">
                     <label for="amount">Amount</label>
                 </div>
                 <div class="input-field col s12">
-                    <button type="submit" id="convertBtn" class="btn">Convert</button>
+                    <button type="submit" id="convertBtn" class="btn waves-effect">Convert</button>
                 </div>
             </form>
             <div class="divider"></div>
-            <div class="result">
-                <h5 id="result"></h5>
+            <div class="result row">
+                <h6 class="col" id="result"></h6>
             </div>
         </div>
     </section>

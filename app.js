@@ -11,6 +11,9 @@ function addCurrencyList(currenciesObj){
         const currencyName = currenciesObj[key].currencyName;
         addCurrenciesToSelectList(currenctId,currencyName);
     }
+    let elems = document.querySelectorAll('select');
+    let options = document.querySelectorAll('option');
+    let instances = M.FormSelect.init(elems);
 }
 
 function addCurrenciesToSelectList(key, value){
@@ -42,6 +45,6 @@ convertBtn.addEventListener('click', (e)=> {
     e.preventDefault();
     const fromValue = fromSelectList.value;
     const toValue = toSelectList.value;
-    const amountValue = amount.value;
+    const amountValue = amount.value; 
     getResult(fromValue, toValue, amountValue);
 })
